@@ -1,0 +1,5 @@
+agencia_mais_cedente_dv:
+  # Padrão: deixa em branco
+  pos: [73, 73]
+  picture: 'X(1)'
+  default: ''

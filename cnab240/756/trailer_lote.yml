@@ -1,7 +1,6 @@
 qtde_titulo_cobranca_vinculada:
   pos: [47, 52]
-  picture: 'X(6)'
-  default: ''
+  picture: '9(6)'
 
 valor_total_titulo_vinculada:
   pos: [53, 69]

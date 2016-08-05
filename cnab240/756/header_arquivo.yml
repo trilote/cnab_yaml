@@ -12,6 +12,41 @@ agencia_dv:
   picture: 'X(1)'
   default: ''
 
+codigo_cedente:
+  # Código do Cedente
+  # Remessa: Código do Convênio no Banco (sem operação), tamanho: 12 posições, no formato
+  # 0000CCCCCCCC.
+  # Retorno: Código do Convênio no Banco (com operação), tamanho: 12 posições, no formato
+  # 0OOOCCCCCCCC.
+  # Onde:
+  # 0 = zero
+  # OOO = Operação
+  # CCCCCCCC = Cedente
+  pos: [59, 70]
+  picture: '9(12)'
+
+codigo_cedente_dv: 
+  # Dígito Verificador do Cedente
+  # Código adotado pela CAIXA, para verificação da autenticidade do Código do Cedente. Calculado
+  # através do módulo 11.
+  # Exemplo de como calcular o DV do Cedente:
+  # Agência/Código do Cedente: 0012.870.00000575-1
+  # Para Remessa – Cedente sem operação e sem DV: 00000575
+  # Para Retorno – Cedente com operação e sem DV: 87000000575
+  # 0 0 0 0 0 5 7 5
+  # 9 8 7 6 5 4 3 2
+  # 0 0 0 0 0 20 21 10
+  # 1ª linha – Código do Cedente
+  # 2ª linha – Índice multiplicação, preencher sequencialmente de 2 a 9 da direita para a esquerda
+  # 3ª linha – Multiplicação coluna por coluna (0x9, 0x8, 0x7, 0x6, 0x5, 0x4, 3x3, 3x2)
+  # Soma-se os valores da 3ª linha: 0+0+0+0+0+20+21+10 = 51
+  # Dividir o resultado da soma por onze: 51/11 = 4 (resto 7)
+  # Subtrair onze pelo resto da divisão: 11 – 7 = 4
+  # O Dígito Verificador calculado para o Código de Cedente acima é 4
+  # Obs.: se o resultado da subtração for maior que 9 (nove) o dígito será 0 (zero)
+  pos: [71, 71]
+  picture: '9(1)'
+
 agencia_mais_cedente_dv:
   # Padrão: deixa em branco
   pos: [72, 72]
