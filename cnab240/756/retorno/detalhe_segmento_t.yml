@@ -7,3 +7,7 @@ numero_contrato:
   #Nº do Contr. da Operação de Crédito: Número adotado pela Empresa Beneficiária para identificação do número do contrato.
   pos: [189,198]
   picture: '9(10)'
+
+nosso_numero:
+  pos: [38, 47]
+  picture: '9(10)'
