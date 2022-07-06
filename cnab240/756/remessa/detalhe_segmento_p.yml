@@ -43,3 +43,8 @@ nosso_numero:
   # Segmento T (ver Nota G072).
   pos: [38,57]
   picture: 'X(20)'
+
+prazo_baixa:
+  pos: [225, 227]
+  picture: 'X(3)'
+  default: ''

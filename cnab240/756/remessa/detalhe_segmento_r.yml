@@ -42,10 +42,10 @@ uso_exclusivo_febraban_04:
   picture: 'X(20)'
   default: ''
 
-codigo_ocorrencia_pagador:
+data_limite:
   pos: [200, 207]
   picture: '9(8)'
-  default: 0
+  date_format: '%d%m%Y'
 
 banco_conta_debito:
   pos: [208, 210]
@@ -86,3 +86,13 @@ uso_exclusivo_febraban_03:
   pos: [232, 240]
   picture: 'X(9)'
   default: ''
+
+data_multa:
+  # Data a partir da qual a multa deverá ser cobrada. Na ausência, será considerada a data de
+  # vencimento. Utilizar o formato DDMMAAAA, onde:
+  # DD = dia
+  # MM = mês
+  # AAAA = ano
+  pos: [67, 74]
+  picture: '9(8)'
+  date_format: '%d%m%Y'
