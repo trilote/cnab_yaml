@@ -103,6 +103,10 @@ nome_sacado:
   pos: [149, 188]
   picture: 'X(40)'
 
+documento_sacado:
+  pos: [138, 148]
+  picture: 'X(11)'
+
 uso_exclusivo_febraban_02:
   pos: [189, 198]
   picture: 'X(10)'
